@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="K-UA-compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multicolored circle</title>
+        
+    <style>
+        div
+        {
+            margin-top: 30px;
+            border: 1px solid purple;
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+    </style>
+    </head>
+    <body>
+        <div onclick="getNewColor()" id="circle"></div>
+        <script>
+            const colors = ["purple", "blue", "green", "red", "azure", "yellow", "black", "grey", "brown", "beige"]
+            document.getElementById("circle").style.backgroundColor = "purple";
+            function getNewColor (){
+                (document.getElementById("circle").style.backgroundColor = colors[Math.floor(Math.random() * colors.length)])
+            }
+        </script>
+        
+    </body>
+</html>
